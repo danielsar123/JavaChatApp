@@ -3,7 +3,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class ClientHandler implements Runnable{ // instances will be executed by a separate thread
-    public static ArrayList<ClientHandler> clientHandlers = new ArrayList<>(); //helps communicate with multiple clients
+    public static ArrayList<ClientHandler> clientHandlers = new ArrayList<>(); //helps communicate with multiple clients, accessible to class not just objects of class
     private Socket socket; //imported from server class, used to establish connection between client and server
     private BufferedReader bufferedReader; //used to read messages from client
     private BufferedWriter bufferedWriter; //used to send messages to client
@@ -16,7 +16,7 @@ public class ClientHandler implements Runnable{ // instances will be executed by
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.clientUsername = bufferedReader.readLine(); //read first line inputted from client and set it as username
             clientHandlers.add(this); //adds current ClientHandler object to arraylist
-            broadcastMessage("Server: " + clientUsername + "has entered chat!"); //send message to all connected clients
+            broadcastMessage("Server: " + clientUsername + " has entered chat!"); //send message to all connected clients
 
         }catch (IOException e){
             closeEverything(socket, bufferedReader, bufferedWriter);
@@ -52,7 +52,7 @@ public class ClientHandler implements Runnable{ // instances will be executed by
     }
     public void removeClientHandler(){
         clientHandlers.remove(this); //remove current client handler object from arraylist
-        broadcastMessage("Server: " + clientUsername + "has left the chat!");
+        broadcastMessage("Server: " + clientUsername + " has left the chat!");
     }
     public void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter){
         removeClientHandler();
