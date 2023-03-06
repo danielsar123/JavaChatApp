@@ -38,18 +38,21 @@ public class ClientHandler implements Runnable{ // instances will be executed by
              }
     }
     public void broadcastMessage(String messageToSend){
-        for (ClientHandler clientHandler : clientHandlers){ //iterate through every client in arraylist
+        for (ClientHandler clientHandler : clientHandlers){
             try{
-                if(!clientHandler.clientUsername.equals(clientUsername)){ // if current client's username is different from the one that is sending message
-                  clientHandler.bufferedWriter.write(messageToSend); //send the desired String
-                  clientHandler.bufferedWriter.newLine(); //done sending data
-                  clientHandler.bufferedWriter.flush(); //flush buffer manually
+                if(!clientHandler.clientUsername.equals(clientUsername)){
+                    if (clientHandler.bufferedWriter != null) { // check if bufferedWriter is not null before writing to it
+                        clientHandler.bufferedWriter.write(messageToSend);
+                        clientHandler.bufferedWriter.newLine();
+                        clientHandler.bufferedWriter.flush();
+                    }
                 }
             } catch (IOException e){
                 closeEverything(socket, bufferedReader, bufferedWriter);
             }
         }
     }
+
     public void removeClientHandler(){
         clientHandlers.remove(this); //remove current client handler object from arraylist
         broadcastMessage("Server: " + clientUsername + " has left the chat!");

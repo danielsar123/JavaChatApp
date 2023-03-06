@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c6deb94-d275-4047-a19f-b70868eb1e39" name="Changes" comment="Created client handler class">
-      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+    <list default="true" id="2c6deb94-d275-4047-a19f-b70868eb1e39" name="Changes" comment="Created client class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Dansa/Javadecrpyt1"
+    "last_opened_file_path": "C:/Users/Dansa/Comp429Proj1/chat.py"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Client">
@@ -96,12 +95,20 @@
       <option name="project" value="LOCAL" />
       <updated>1677734408162</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created client class">
+      <created>1677750771630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677750771630</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Server class" />
     <MESSAGE value="Created client handler class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created client handler class" />
+    <MESSAGE value="Created client class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created client class" />
   </component>
 </project>
